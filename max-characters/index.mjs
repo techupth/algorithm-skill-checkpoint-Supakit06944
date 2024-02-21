@@ -15,14 +15,12 @@
 
 //  }
 // };
-export const getMostFrequentChar = (str) => {
+export const getMaxCharacters = (str) => {
   const charMap = {};
   let maxChar = "";
   let maxCount = 0;
 
-  // Count occurrences of each character
   for (let char of str) {
-    console.log(charMap[char]);
     charMap[char] = (charMap[char] || 0) + 1;
     if (charMap[char] > maxCount) {
       maxChar = char;
@@ -33,4 +31,4 @@ export const getMostFrequentChar = (str) => {
 };
 
 const str = "abcccccccd";
-console.log(getMostFrequentChar(str));
+console.log(getMaxCharacters(str));
